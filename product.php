@@ -5,7 +5,7 @@
     header("Access-Control-Allow-Headers: X-Requested-With");
     header("Content-Type: application/json");
 
-    require_once("db.php");
+    require_once("db_product.php");
     $product = new Database();
 
     $api = $_SERVER["REQUEST_METHOD"];

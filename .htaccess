@@ -3,6 +3,8 @@ RewriteEngine On
 
 #Remove .php extension form product.php
 RewriteRule ^product/?$ product.php [NC,L]
+RewriteRule ^customers/?$ customers.php [NC,L]
 
 #Rewrite URL
 RewriteRule ^product/([0-9]+)/?$ product.php?ProductID=$1 [NC,L]
+RewriteRule ^customers/([A-Za-z0-9]+)/?$ customers.php?CustomerID=$1 [NC,L]
