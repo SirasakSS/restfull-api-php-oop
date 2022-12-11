@@ -14,7 +14,7 @@
 
     // GET All data or Single data
     if ($api == "GET") {
-        if ($CustomerID != 0) {
+        if ($CustomerID != "") {
             $data = $customer->fetch($CustomerID);
         } else {
             $data = $customer->fetchAll();

@@ -1,12 +1,12 @@
 <?php 
 
-    require_once("config_local.php");
+    require_once("config.php");
 
     class Database extends config {
 
-        public function fetch($CustomerID = 0) {
+        public function fetch($CustomerID = "") {
             $sql = "SELECT CustomerID, CompanyName, ContactName FROM customers";
-            if ($CustomerID != 0) {
+            if ($CustomerID != "") {
                 $sql .= " WHERE CustomerID = :CustomerID";
                 // "SELECT CustomerID, CompanyName, ContactName FROM customers WHERE CustomerID = :CustomerID";
             }
